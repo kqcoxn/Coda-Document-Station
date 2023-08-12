@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codax 的说明文档小栈</title>
+    <link rel="icon" href="../_media/icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #app {
+            font-size: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">站长祈愿中...(别崩溃哇T.T)</div>
+</body>
+
+<script>
+    var info = window.location.href.split('?')[1];
+    var info_array = [];
+    if (info != null) {
+        var info_array = info.split('&');
+    }
+    target = "";
+    id = "";
+    if (info_array.length > 0) {
+        target = info_array[0].split('=')[1];
+        if (info_array.length > 1) {
+            id = "?" + info_array[1];
+        }
+    }
+    if (target == "aixbot")
+        window.open("./AIxbot/#/README" + id, "_self");
+    else if (target == "yva-tech")
+        window.open("./YVA-Tech/#/README" + id, "_self");
+    else
+        window.open("./docs/#/README" + id, "_self");
+</script>
+
+</html>

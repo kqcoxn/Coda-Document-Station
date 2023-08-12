@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AI星宝</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="../_media/icon.png">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- 手风琴 -->
+  <link rel="stylesheet" href="//unpkg.com/docsify-accordify/src/assets/default.css">
+  <style>
+    :root {
+      --docsifytabs-border-color: #ededed;
+      --docsifytabs-tab-highlight-color: #0b87da;
+    }
+
+    h2 {
+      font-size: 26px !important;
+    }
+
+    h3 {
+      font-size: 22px !important;
+    }
+
+    h4 {
+      font-size: 18px !important;
+    }
+
+    .sidebar-nav>ul>li:first-child:not(:has(a)) {
+      text-align: center !important;
+      font-size: 18px !important;
+      margin-left: -10% !important;
+    }
+
+    a[title="说明文档小栈"] {
+      color: var(--theme-color, #42b983) !important;
+      border-bottom: 2px solid var(--theme-color, #42b983) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">站长祈愿中...(别崩溃哇T.T)</div>
+
+  <script>
+    window.onload = function () {
+      window.addEventListener("hashchange", function () {
+        Jump();
+      });
+    };
+    function Jump() {
+      let url = window.location.href;
+      if (url.includes("target=")) {
+        window.open("../index.html?target=" + url.split('=')[1], "_self");
+      }
+    }
+  </script>
+
+  <script>
+    window.$docsify = {
+      //Docsify
+      repo: 'https://github.com/kqcoxn',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      loadNavbar: true,
+      name: 'Codax 的说明文档小栈',
+      nameLink: '/',
+      autoHeader: false,
+      mergeNavbar: true,
+      topMargin: 30,
+      auto2top: true,
+      //全文搜索
+      search: {
+        placeholder: '搜索',
+        noData: '没有想要的内容呢qwq',
+        depth: 6
+      },
+      //tab
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: 'classic',
+        tabComments: true,
+        tabHeadings: true
+      },
+      //复制
+      copyCode: {
+        buttonText: '复制',
+        errorText: 'Error',
+        successText: '已复制！'
+      },
+      //阅读进度
+      progress: {
+        position: "bottom",
+        color: "var(--theme-color,#42b983)",
+        height: "3px"
+      },
+      //最后更新时间
+      timeUpdater: {
+        text: ">最近更新时间:  {docsify-updated}",
+        formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}",
+        whereToPlace: "bottom"
+      },
+
+    }
+  </script>
+
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 全文搜索 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 复制 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- tabs -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- 阅读进度 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+  <!-- 手风琴 -->
+  <script src="//unpkg.com/docsify-accordify/src/index.js"></script>
+  <!-- 最后更改时间 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
+</body>
+
+</html>
